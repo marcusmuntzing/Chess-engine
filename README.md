@@ -12,8 +12,6 @@ Welcome to the Chess Mastery Engine, a powerful tool designed to help you advanc
 
 - **Customization:** Customize the board, pieces, and rules to suit your preferences and practice specific scenarios.
 
-- **Play against Friends:** Engage in friendly matches with friends or chess enthusiasts around the world using online multiplayer functionality.
-
 ## Getting Started
 
 ### Prerequisites
