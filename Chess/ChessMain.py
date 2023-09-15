@@ -32,7 +32,7 @@ def main():
     clock = p.time.Clock()
     screen.fill(p.Color("white"))
     gs = ChessEngine.GameState()
-    validMoves = [] #Used to compare user moves to see if in validMoves list...
+    validMoves = gs.getValidMoves() #Used to compare user moves to see if in validMoves list...
     moveMade = False # Flag variable for when move is made, we dont want to call valid moves each time
     loadImages() #Load Images only once 
     running = True
@@ -60,13 +60,13 @@ def main():
                 if len(playerClicks) == 2: #After 2nd click
                     move = ChessEngine.Move(playerClicks[0], playerClicks[1], gs.board)
                     print(move.getChessNotation())
-                    gs.makeMove(move)
-                    moveMade = True
+                    
+                    if move in validMoves:
+                        gs.makeMove(move)
+                        moveMade = True
+
                     sqSelected = () # Resetting the user clicks 
                     playerClicks = []
-
-
-                
 
             #Key handlers
             elif e.type == p.KEYDOWN:
